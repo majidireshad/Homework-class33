@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 You want to buy a couple of things from the supermarket to prepare for a party.
 After scanning all the items the cashier wants to give you the total price, but
@@ -19,21 +20,33 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  beer:10,
+  chocolate: 2,
+  cake: 20,
+  bbq:30,
+  candy:5
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+function calculateTotalPrice(total) {
+ 
+  const objectValues=Object.values(total);
+  const reducer = (a, b) => a + b;
+  const sumCart=objectValues.reduce(reducer);
+  return 'Total: €'+ sumCart;
 }
 
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  const expected = 1;
+  const actual = calculateTotalPrice.length;
+  console.assert(actual === expected);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  const expected = 'Total: €67';
+  const actual = calculateTotalPrice(cartForParty);
+  console.assert(actual === expected);
 }
 
 function test() {
@@ -41,4 +54,4 @@ function test() {
   test2();
 }
 
-test();
+test()

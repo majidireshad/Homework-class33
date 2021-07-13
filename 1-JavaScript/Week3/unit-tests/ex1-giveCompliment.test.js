@@ -48,7 +48,7 @@ describe('giveCompliment', () => {
     if (!exported) return;
     expect(state.compliments).toBeDefined();
 
-    const name = 'HackYourFuture';
+    const name = 'Reshad';
 
     const spy = jest.spyOn(Math, 'random').mockReturnValue(0);
     const received = giveCompliment(name);
