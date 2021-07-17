@@ -29,7 +29,8 @@ randomly select array elements four times inside the `tellFortune` function
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
 const numKids = [
-1,3,2,6,4];
+  1, 3, 2, 6, 4
+];
 
 const partnerNames = [
 'Julian', 'Mark', 'Liza', 'Tom', 'David'];
