@@ -36,7 +36,8 @@ const partnerNames = [
 'Julian', 'Mark', 'Liza', 'Tom', 'David'];
 
 const locations = [
-'Amsterdam','Delft','Rotterdam', 'Leiden','Utrecht'];
+  'Amsterdam', 'Delft', 'Rotterdam',  'Leiden', 'Utrecht'
+  ];
 
 const jobTitles = [
 'Graphic designer', 'junior Accountant', 'IT Manager','Doctor','Researcher'];
