@@ -26,7 +26,7 @@ function addToShoppingCart(groceryItem) {
   if (shoppingCart.length > 3){
     shoppingCart.shift();
   }
-  return 'You bought'+shoppingCart[0]+','+shoppingCart[1]+','+shoppingCart[2]+'!';
+  return `You bought ${shoppingCart[0]}, ${shoppingCart[1]}, ${shoppingCart[2]}!`;
  }
 
 // ! Test functions (plain vanilla JavaScript)
