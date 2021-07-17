@@ -46,7 +46,6 @@ const jobTitles = [
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(arr) {
-  for (let i=0;i<arr.length;i++){
     const rand=Math.floor(Math.random() * 10);
     return arr[rand]}
   }
