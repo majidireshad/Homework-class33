@@ -29,7 +29,7 @@
 
 
 // TODO substitute your own name for "HackYourFuture"
-const myName = 'HackYourFuture';
+const myName = 'Reshad';
 
 console.log(giveCompliment(myName));
 console.log(giveCompliment(myName));
