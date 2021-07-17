@@ -31,9 +31,8 @@ const employeeRecords = [
 function filterPrivateData(filteredRecords) {
   const filteredEmployeeRecords = [];
 for (const employeeRecord of filteredRecords){
-   const {name,occupation,email}=obj;
-    const newObj={name,occupation,email};
-  array.push(newObj);
+   const {name, occupation, email} = employeeRecord;
+   array.push({name,occupation,email});
 }
 return array;
 }
