@@ -40,7 +40,8 @@ const locations = [
   ];
 
 const jobTitles = [
-'Graphic designer', 'junior Accountant', 'IT Manager','Doctor','Researcher'];
+  'Graphic designer', 'junior Accountant', 'IT Manager', 'Doctor','Researcher'
+  ];
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
