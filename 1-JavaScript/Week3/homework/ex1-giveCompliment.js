@@ -25,7 +25,6 @@
       const compliment = compliments[rand];
       return `You are ${compliment}, ${name}!`;
     }
-   
   }
 
 
