@@ -51,11 +51,11 @@ function selectRandomly(arr) {
   }
 
 
-function tellFortune(kids,par,loc,job) {
-const randomJob=selectRandomly(job);
-const randomLoc=selectRandomly(loc);
-const randomPar=selectRandomly(par);
-const randomKids=selectRandomly(kids);
+function tellFortune(numberOfKidsOptions, partnerOptions, locationOptions, jobOptions) {
+const randomJob = selectRandomly(jobOptions);
+const randomLocation = selectRandomly(locationOptions);
+const randomPartner = selectRandomly(partnerOptions);
+const randomNumberOfKids = selectRandomly(numberOfKidsOptions);
 
   return `You will be a ${randomJob} in ${randomLoc}, married to ${randomPar} with ${randomKids} kids.`
 }
