@@ -20,9 +20,9 @@
 
   function giveCompliment(name) {
     const compliments = ['nice', 'funny', 'great', 'kind', 'smart', 'cool', 'caring', 'handsome', 'pretty', 'strong'];
-    for (let i=0;i<compliments.length;i++){
-      const rand=Math.floor(Math.random() * 10);
-      const compliment=compliments[rand];
+    for (let i=0; i<compliments.length; i++){
+      const rand = Math.floor(Math.random() * 10);
+      const compliment = compliments[rand];
       return `You are ${compliment}, ${name}!`;
     }
    
