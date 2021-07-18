@@ -28,36 +28,39 @@ Note: The DRY is put into practice here: instead of repeating the code to
 randomly select array elements four times inside the `tellFortune` function 
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
-const numKids = [
-  1, 3, 2, 6, 4
-];
+const numKids = [1, 3, 2, 6, 4];
 
-const partnerNames = [
-'Julian', 'Mark', 'Liza', 'Tom', 'David'];
+const partnerNames = ['Julian', 'Mark', 'Liza', 'Tom', 'David'];
 
-const locations = [
-  'Amsterdam', 'Delft', 'Rotterdam',  'Leiden', 'Utrecht'
-  ];
+const locations = ['Amsterdam', 'Delft', 'Rotterdam', 'Leiden', 'Utrecht'];
 
 const jobTitles = [
-  'Graphic designer', 'junior Accountant', 'IT Manager', 'Doctor','Researcher'
-  ];
+  'Graphic designer',
+  'junior Accountant',
+  'IT Manager',
+  'Doctor',
+  'Researcher',
+];
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(arr) {
-    const rand=Math.floor(Math.random() * 10);
-    return arr[rand]}
-  }
+  const rand = Math.floor(Math.random() * 10);
+  return arr[rand];
+}
 
+function tellFortune(
+  numberOfKidsOptions,
+  partnerOptions,
+  locationOptions,
+  jobOptions
+) {
+  const randomJob = selectRandomly(jobOptions);
+  const randomLocation = selectRandomly(locationOptions);
+  const randomPartner = selectRandomly(partnerOptions);
+  const randomNumberOfKids = selectRandomly(numberOfKidsOptions);
 
-function tellFortune(numberOfKidsOptions, partnerOptions, locationOptions, jobOptions) {
-const randomJob = selectRandomly(jobOptions);
-const randomLocation = selectRandomly(locationOptions);
-const randomPartner = selectRandomly(partnerOptions);
-const randomNumberOfKids = selectRandomly(numberOfKidsOptions);
-
-  return `You will be a ${randomJob} in ${randomLoc}, married to ${randomPar} with ${randomKids} kids.`
+  return `You will be a ${randomJob} in ${randomLocation}, married to ${randomPartner} with ${randomNumberOfKids} kids.`;
 }
 
 console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

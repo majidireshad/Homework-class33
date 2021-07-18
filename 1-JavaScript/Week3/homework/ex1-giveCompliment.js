@@ -18,15 +18,23 @@
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
 
-  function giveCompliment(name) {
-    const compliments = ['nice', 'funny', 'great', 'kind', 'smart', 'cool', 'caring', 'handsome', 'pretty', 'strong'];
-    for (let i=0; i<compliments.length; i++){
-      const rand = Math.floor(Math.random() * 10);
-      const compliment = compliments[rand];
-      return `You are ${compliment}, ${name}!`;
-    }
-  }
-
+function giveCompliment(name) {
+  const compliments = [
+    'nice',
+    'funny',
+    'great',
+    'kind',
+    'smart',
+    'cool',
+    'caring',
+    'handsome',
+    'pretty',
+    'strong',
+  ];
+  const rand = Math.floor(Math.random() * 10);
+  const compliment = compliments[rand];
+  return `You are ${compliment}, ${name}!`;
+}
 
 // TODO substitute your own name for "HackYourFuture"
 const myName = 'Reshad';

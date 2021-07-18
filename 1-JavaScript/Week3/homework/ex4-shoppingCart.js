@@ -23,11 +23,16 @@ const shoppingCart = ['bananas', 'milk'];
 // ! Function to be tested
 function addToShoppingCart(groceryItem) {
   shoppingCart.push(groceryItem);
-  if (shoppingCart.length > 3){
+  if (shoppingCart.length > 3) {
     shoppingCart.shift();
   }
-  return `You bought ${shoppingCart[0]}, ${shoppingCart[1]}, ${shoppingCart[2]}!`;
- }
+  for (let i = 0; i <= groceryItem.length - 1; i++) {
+    const indexItem = i;
+    return `You bought ${shoppingCart[0]}, ${shoppingCart[indexItem - 1]}, ${
+      shoppingCart[indexItem]
+    }!`;
+  }
+}
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

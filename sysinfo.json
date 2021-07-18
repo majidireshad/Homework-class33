@@ -1,0 +1,33 @@
+{
+  "node": "v15.6.0",
+  "system": {
+    "manufacturer": "LENOVO",
+    "model": "81Y4"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i7-10750H",
+    "speed": 2.6
+  },
+  "memory": "16 GB",
+  "osInfo": {
+    "platform": "win32",
+    "distro": "Microsoft Windows 10 Home",
+    "release": "10.0.19042"
+  },
+  "vscodeInfo": {
+    "version": "1.57.1",
+    "extensions": [
+      "CoenraadS.bracket-pair-colorizer",
+      "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "hdg.live-html-previewer",
+      "ritwickdey.LiveServer",
+      "WallabyJs.quokka-vscode"
+    ],
+    "userSettings": {
+      "editor.formatOnSave": true,
+      "window.zoomLevel": 2
+    }
+  }
+}
