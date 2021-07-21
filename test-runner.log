@@ -784,3 +784,64 @@ npm ERR!     C:\Users\31610\AppData\Local\npm-cache\_logs\2021-07-19T10_40_43_08
 2021-07-19 12:43:27 info: ------------------------------------------
 2021-07-19 12:43:31 info: All unit tests passed.
 2021-07-19 12:43:36 info: All steps were completed successfully
+2021-07-20 05:54:36 info: ------------------------------------------
+2021-07-20 05:54:36 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-20 05:54:36 info: ------------------------------------------
+2021-07-20 05:54:49 info: All unit tests passed.
+2021-07-20 05:54:57 info: All steps were completed successfully
+2021-07-20 05:55:33 info: -------------------------------------------------
+2021-07-20 05:55:33 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2021-07-20 05:55:33 info: -------------------------------------------------
+2021-07-20 05:55:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest "D:\HYF-homework-JS\Homework-class33\1-JavaScript\Week4\homework\ex2-mondaysWorth.test.js" --colors
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (4 ms)
+    × should compute the earnings as a formatted Euro amount (8 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€26.68"
+
+      52 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      53 |     const expected = '€187.50';
+    > 54 |     expect(result).toBe(expected);
+         |                    ^
+      55 |   });
+      56 | });
+      57 | 
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:54:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        2.897 s
+Ran all test suites matching /D:\\HYF-homework-JS\\Homework-class33\\1-JavaScript\\Week4\\homework\\ex2-mondaysWorth.test.js/i.
+npm ERR! code 1
+npm ERR! path D:\HYF-homework-JS\Homework-class33
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c jest D:\\HYF-homework-JS\\Homework-class33\\1-JavaScript\\Week4\\homework\\ex2-mondaysWorth.test.js --colors
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\31610\AppData\Local\npm-cache\_logs\2021-07-20T03_55_39_670Z-debug.log
+)
+2021-07-20 05:59:58 info: -------------------------------------------------
+2021-07-20 05:59:58 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2021-07-20 05:59:58 info: -------------------------------------------------
+2021-07-20 06:00:03 info: All unit tests passed.
+2021-07-20 06:00:08 info: All steps were completed successfully
+2021-07-20 06:00:55 info: -------------------------------------------------
+2021-07-20 06:00:55 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-07-20 06:00:55 info: -------------------------------------------------
+2021-07-20 06:01:00 info: All unit tests passed.
+2021-07-20 06:01:05 info: All steps were completed successfully
+2021-07-20 06:01:25 info: ------------------------------------------
+2021-07-20 06:01:25 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-20 06:01:25 info: ------------------------------------------
+2021-07-20 06:01:30 info: All unit tests passed.
+2021-07-20 06:01:35 info: All steps were completed successfully

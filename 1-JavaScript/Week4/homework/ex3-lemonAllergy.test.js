@@ -25,8 +25,8 @@ const fruitBasket = [
 
 // ! Function under test
 function sanitizeFruitBasket(fruitBasketArray, nameOfFruit) {
-  const filteredFruitBasket = fruitBasketArray.filter((item) => {
-    return item === nameOfFruit;
+  const filteredFruitBasket = fruitBasketArray.filter((discardedFruit) => {
+    return discardedFruit === nameOfFruit;
   });
   return filteredFruitBasket;
 }

@@ -31,11 +31,14 @@ const hourlyRate = 25;
 
 function computeEarnings(tasks, rate) {
   const taskDurationRate = tasks.map((item) => {
-    return item.duration * rate
-  })
-   const sumAllDurationMinutes = taskDurationRate.reduce((total, item) => total + item, 0);
-   const sumAllDurationHourly = sumAllDurationMinutes / 60;
-   return `€${sumAllDurationHourly.toFixed(2)}`;
+    return item.duration * rate;
+  });
+  const sumAllDurationMinutes = taskDurationRate.reduce(
+    (total, item) => total + item,
+    0
+  );
+  const sumAllDurationHourly = sumAllDurationMinutes / 60;
+  return `€${sumAllDurationHourly.toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)
