@@ -28,15 +28,16 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(filteredRecords) {
-  const filteredEmployeeRecords = [];
-for (const employeeRecord of filteredRecords){
-   const {name, occupation, email} = employeeRecord;
-   array.push({name,occupation,email});
+function filterPrivateData(employeeRecordsData) {
+  const publicEmployeeRecords = [];
+  const privateEmployeeRecords = [];
+  for (const employeeRecord of employeeRecordsData) {
+    const { gender, salary, ...publicData } = employeeRecord;
+    privateEmployeeRecords.push(gender + salary);
+    publicEmployeeRecords.push(publicData);
+  }
+  return publicEmployeeRecords;
 }
-return array;
-}
-
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: filterPrivateData should take one parameters');

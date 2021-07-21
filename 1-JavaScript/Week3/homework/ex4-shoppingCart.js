@@ -26,12 +26,7 @@ function addToShoppingCart(groceryItem) {
   if (shoppingCart.length > 3) {
     shoppingCart.shift();
   }
-  for (let i = 0; i <= groceryItem.length - 1; i++) {
-    const indexItem = i;
-    return `You bought ${shoppingCart[0]}, ${shoppingCart[indexItem - 1]}, ${
-      shoppingCart[indexItem]
-    }!`;
-  }
+  return `You bought ${shoppingCart.join(', ')}!`;
 }
 
 // ! Test functions (plain vanilla JavaScript)

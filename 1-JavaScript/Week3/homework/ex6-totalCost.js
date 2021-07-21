@@ -20,19 +20,18 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  beer:10,
+  beer: 10,
   chocolate: 2,
   cake: 20,
-  bbq:30,
-  candy:5
+  bbq: 30,
+  candy: 5,
 };
 
-function calculateTotalPrice(total) {
- 
-  const objectValues=Object.values(total);
+function calculateTotalPrice(cartForPartyData) {
+  const partyCosts = Object.values(cartForPartyData);
   const reducer = (a, b) => a + b;
-  const sumCart=objectValues.reduce(reducer);
-  return 'Total: €'+ sumCart;
+  const sumOfAllCosts = partyCosts.reduce(reducer);
+  return `Total: €${sumOfAllCosts}`;
 }
 
 function test1() {
@@ -54,4 +53,4 @@ function test() {
   test2();
 }
 
-test()
+test();
