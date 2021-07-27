@@ -6,7 +6,9 @@
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
+  const logoImage = document.querySelector('#hplogo_new');
+  logoImage.src = `https://www.hackyourfuture.dk/static/logo-dark.svg`;
+  logoImage.srcset = `https://www.hackyourfuture.dk/static/logo-dark.svg`;
 }
-
+//currently Google has a doodle as logo. I hope that this class is correct.
 hijackGoogleLogo();

@@ -8,4 +8,15 @@
    `list-item`.
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+const bodyFont = document.querySelector('body');
+bodyFont.style.fontFamily = 'Arial, sans-serif';
+const nickName = document.querySelector('#nickname');
+const favFood = document.querySelector('#fav-food');
+const hometown = document.querySelector('#hometown');
+nickName.textContent = 'Reshad';
+favFood.textContent = 'Pizza';
+hometown.textContent = 'Rotterdam';
+const listItems = document.querySelectorAll('li');
+for (let i = 0; i < listItems.length; i++) {
+  listItems[i].setAttribute('class', 'list-item');
+}
