@@ -1,0 +1,345 @@
+2021-08-29 07:46:04 info: -------------------------------------------------
+2021-08-29 07:46:04 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-29 07:46:04 info: -------------------------------------------------
+2021-08-29 07:46:12 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:29:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:34:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:38:29
+
+
+2021-08-29 07:49:42 info: -------------------------------------------------
+2021-08-29 07:49:42 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-29 07:49:42 info: -------------------------------------------------
+2021-08-29 07:49:47 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:26:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:31:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:35:29
+
+
+2021-08-29 07:52:24 info: -------------------------------------------------
+2021-08-29 07:52:24 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-29 07:52:24 info: -------------------------------------------------
+2021-08-29 07:52:30 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:26:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:31:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:35:29
+
+
+2021-08-29 08:00:50 info: ----------------------------------------
+2021-08-29 08:00:50 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-08-29 08:00:50 info: ----------------------------------------
+2021-08-29 08:00:55 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDice.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js
+  rollDice
+    × should call `new Promise()` (4 ms)
+    × `resolve()` should be called with a one argument (2 ms)
+    × `reject()` should be called with a one argument (1 ms)
+    × should resolve when the dice settles successfully (9 ms)
+    × should reject with an Error when the dice rolls off the table (1 ms)
+
+  ● rollDice › should call `new Promise()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      31 |
+      32 |   test('should call `new Promise()`', () => {
+    > 33 |     expect(state.newPromise).toBeDefined();
+         |                              ^
+      34 |   });
+      35 |
+      36 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:33:30)
+
+  ● rollDice › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      35 |
+      36 |   test('`resolve()` should be called with a one argument', () => {
+    > 37 |     expect(state.resolve).toBe(1);
+         |                           ^
+      38 |   });
+      39 |
+      40 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:37:27)
+
+  ● rollDice › `reject()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      39 |
+      40 |   test('`reject()` should be called with a one argument', () => {
+    > 41 |     expect(state.reject).toBe(1);
+         |                          ^
+      42 |   });
+      43 |
+      44 |   test('should resolve when the dice settles successfully', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:41:26)
+
+  ● rollDice › should resolve when the dice settles successfully
+
+    TypeError: callback is not a function
+
+      30 |     if (roll === randomRollsToDo) {
+      31 |       // TODO replace "success" callback
+    > 32 |       callback(null, value);
+         |       ^
+      33 |     }
+      34 |
+      35 |     // Schedule the next roll todo until no more rolls to do
+
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:32:7)
+      at cb (3-UsingAPIs/Week1/homework/ex3-rollDice.js:37:24)
+      at 3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:52:35
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:37:7)
+      at cb (3-UsingAPIs/Week1/homework/ex3-rollDice.js:37:24)
+      at 3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:52:35
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDice.js:37:7)
+      at rollDice (3-UsingAPIs/Week1/homework/ex3-rollDice.js:42:3)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:54:21)
+
+  ● rollDice › should resolve when the dice settles successfully
+
+    expect.assertions(2)
+
+    Expected two assertions to be called but received zero assertion calls.
+
+      44 |   test('should resolve when the dice settles successfully', () => {
+      45 |     if (!exported) return;
+    > 46 |     expect.assertions(2);
+         |            ^
+      47 |
+      48 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+      49 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:46:12)
+
+  ● rollDice › should reject with an Error when the dice rolls off the table
+
+    expect.assertions(2)
+
+    Expected two assertions to be called but received one assertion call.
+
+      67 |   test('should reject with an Error when the dice rolls off the table', async () => {
+      68 |     if (!exported) return;
+    > 69 |     expect.assertions(2);
+         |            ^
+      70 |
+      71 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+      72 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:69:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 5 total
+Snapshots:   0 total
+Time:        2.169 s
+Ran all test suites matching /ex3-rollDice.test.js/i.
+npm ERR! code 1
+npm ERR! path D:\APIs\Homework-class33
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c jest ex3-rollDice.test.js --colors
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\31610\AppData\Local\npm-cache\_logs\2021-08-29T18_00_55_686Z-debug.log
+
+2021-08-29 08:38:44 info: --------------------------------------------
+2021-08-29 08:38:44 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-08-29 08:38:44 info: --------------------------------------------
+2021-08-29 08:38:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+node:internal/process/promises:227
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "Error: Dice 1 rolled off the table.".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+npm ERR! code 1
+npm ERR! path D:\APIs\Homework-class33
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c jest ex4-pokerDiceAll.test.js --colors
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\31610\AppData\Local\npm-cache\_logs\2021-08-29T18_38_49_352Z-debug.log
+
+2021-08-29 08:38:51 error: *** ESLint Report ***
+
+ex4-pokerDiceAll.js
+  35:9  error  'dices' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2021-08-29 08:44:26 info: -------------------------------------------------
+2021-08-29 08:44:26 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-29 08:44:26 info: -------------------------------------------------
+2021-08-29 08:44:31 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:26:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:31:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:35:29
+
+
+2021-08-29 08:44:36 info: Disclaimer turned off
+2021-08-29 11:32:24 info: --------------------------------------------
+2021-08-29 11:32:24 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-08-29 11:32:24 info: --------------------------------------------
+2021-08-29 11:32:24 warn: A unit test file was not provided.
+2021-08-29 11:32:27 error: *** Spell Checker Report ***
+
+
+2021-08-29 11:33:25 info: ----------------------------------------
+2021-08-29 11:33:25 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-08-29 11:33:25 info: ----------------------------------------
+2021-08-29 11:33:30 info: All unit tests passed.
+2021-08-29 11:33:34 info: All steps were completed successfully
+2021-08-30 12:19:28 info: ----------------------------------------------
+2021-08-30 12:19:28 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-08-30 12:19:28 info: ----------------------------------------------
+2021-08-30 12:19:39 info: All unit tests passed.
+2021-08-30 12:19:47 info: All steps were completed successfully
+2021-08-31 09:23:44 info: ---------------------------------------
+2021-08-31 09:23:44 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-08-31 09:23:44 info: ---------------------------------------
+2021-08-31 09:23:55 info: All unit tests passed.
+2021-08-31 09:24:03 info: All steps were completed successfully
+2021-08-31 09:31:25 info: --------------------------------------------
+2021-08-31 09:31:25 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-08-31 09:31:25 info: --------------------------------------------
+2021-08-31 09:31:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+node:internal/process/promises:227
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "Error: Dice 1 rolled off the table.".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+npm ERR! code 1
+npm ERR! path D:\APIs\Homework-class33
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c jest ex4-pokerDiceAll.test.js --colors
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\31610\AppData\Local\npm-cache\_logs\2021-08-31T07_31_31_102Z-debug.log
+
+2021-08-31 09:40:41 info: --------------------------------------------
+2021-08-31 09:40:41 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-08-31 09:40:41 info: --------------------------------------------
+2021-08-31 09:40:46 info: All unit tests passed.
+2021-08-31 09:40:50 info: All steps were completed successfully
+2021-08-31 09:17:31 info: -------------------------------------------------
+2021-08-31 09:17:31 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-31 09:17:31 info: -------------------------------------------------
+2021-08-31 09:17:37 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:26:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:31:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:35:29
+
+
+2021-08-31 09:19:02 info: -------------------------------------------------
+2021-08-31 09:19:02 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-31 09:19:02 info: -------------------------------------------------
+2021-08-31 09:19:05 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:26:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:31:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:35:29
+
+
+2021-08-31 09:22:28 info: -------------------------------------------------
+2021-08-31 09:22:28 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-31 09:22:28 info: -------------------------------------------------
+2021-08-31 09:22:32 info: All unit tests passed.
+2021-08-31 09:22:35 info: All steps were completed successfully
+2021-08-31 09:46:15 info: ----------------------------------------------
+2021-08-31 09:46:15 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2021-08-31 09:46:15 info: ----------------------------------------------
+2021-08-31 09:46:18 info: All unit tests passed.
+2021-08-31 09:46:21 info: All steps were completed successfully
