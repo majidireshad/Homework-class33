@@ -20,18 +20,64 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    } else {
+      throw new Error('Cannot connect to server!');
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(data) {
+  const selectPokemon = document.createElement('select');
+  const pokemons = data.results;
+  pokemons.forEach((element) => {
+    const pokemonOptions = document.createElement('option');
+    pokemonOptions.value = element.name;
+    pokemonOptions.text = element.name;
+    selectPokemon.appendChild(pokemonOptions);
+    selectPokemon.addEventListener('change', fetchImage);
+    document.body.appendChild(selectPokemon);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(event) {
+  const resetImg = document.querySelector('img');
+  if (resetImg) {
+    resetImg.remove();
+  }
+  const pokemonsUrl = `https://pokeapi.co/api/v2/pokemon/${event.currentTarget.value}`;
+  const data = await fetchData(pokemonsUrl);
+  const pokemonImg = document.createElement('img');
+  pokemonImg.src = data.sprites.front_default;
+  document.body.appendChild(pokemonImg);
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const pokemonBtn = document.createElement('button');
+  pokemonBtn.textContent = 'Get Pokemon!';
+  pokemonBtn.type = 'button';
+  document.body.appendChild(pokemonBtn);
+
+  try {
+    const parsedData = await fetchData(
+      'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200'
+    );
+    pokemonBtn.addEventListener('click', () => {
+      fetchAndPopulatePokemons(parsedData);
+      if (pokemonBtn) {
+        pokemonBtn.remove();
+      }
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
 }
+
+window.addEventListener('load', main);
