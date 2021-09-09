@@ -42,7 +42,6 @@ function rollDice() {
   });
 }
 
-// TODO Refactor to use promise
 rollDice()
   .then((value) => {
     console.log(`Success! Dice settled on ${value}.`);
@@ -52,3 +51,6 @@ rollDice()
   });
 // ! Do not change or remove the code below
 module.exports = rollDice;
+
+//The problems resolves by adding a promise. I think the reason is that when we use a promise, the rejection ends the function.
+//but with call back we only log an error statement to the console but do not really end it.

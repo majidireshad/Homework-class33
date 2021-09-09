@@ -34,3 +34,8 @@ rollTheDices()
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+//The reason that the dices that have not finished
+//their code still keep running after a dice is rejected
+// is because they are all called at the same time, so they
+// still need to go through the stack first.
